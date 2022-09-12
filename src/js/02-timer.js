@@ -42,6 +42,9 @@ flatpickr(ref.input, options)
 ref.startBtn.addEventListener('click', startTimer);
 
 function startTimer() {
+    ref.startBtn.disabled = true;
+    ref.input.disabled = true;
+    
     const currentDate = new Date(`${ref.input.value}`);
 
     const timerInterval = setInterval(() => { 

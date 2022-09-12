@@ -11,13 +11,14 @@ ref.stopBtn.addEventListener('click', onStopChange);
 ref.stopBtn.disabled = true;
 
 function onStartChange() {
+    ref.startBtn.disabled = true;
+    ref.stopBtn.disabled = false;
     timerId = setInterval(changeBodyColor, 1000);
 }
 
 function changeBodyColor() {
     ref.body.style.backgroundColor = getRandomHexColor();
-    ref.startBtn.disabled = true;
-    ref.stopBtn.disabled = false;
+
 }
 
 function onStopChange() {
